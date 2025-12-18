@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>{{ product.name }} | Aarohi Selections</title>
+    <meta
+      name="description"
+      content="{{ product.description|truncatechars:150 }}"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ product.name }} | Aarohi Selections" />
+    <meta property="og:description" content="{{ product.description|truncatechars:150 }}" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="{{ full_url }}" />
+    {% if og_image %}
+    <meta property="og:image" content="{{ og_image }}" />
+    {% endif %}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ product.name }} | Aarohi Selections" />
+    <meta name="twitter:description" content="{{ product.description|truncatechars:150 }}" />
+    {% if og_image %}
+    <meta name="twitter:image" content="{{ og_image }}" />
+    {% endif %}
+
+    <!-- Your fonts etc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module"  src="https://aarohiselections.vercel.app/assets/main.js></script>
+  </body>
+</html>
